@@ -16,6 +16,7 @@ namespace RomanNumerals
         [TestCase(1712, ExpectedResult = "MDCCXII")]
         [TestCase(4000, ExpectedResult = "MMMM")]
         [TestCase(4001, ExpectedException = typeof(InvalidOperationException))]
+        [TestCase(-1, ExpectedException = typeof(InvalidOperationException))]
         public string CanCalulateRomanNumerals(int input)
         {
             return input.ToRomanNumeral();

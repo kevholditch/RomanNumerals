@@ -30,7 +30,7 @@ namespace RomanNumerals
 
         public static string ToRomanNumeral(this int integer)
         {
-            if (integer > 4000)
+            if (integer < 0 || integer > 4000)
                 throw new InvalidOperationException("Numbers over 4000 are not supported!");
 
             var stringBuilder = new StringBuilder();
